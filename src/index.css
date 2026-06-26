@@ -1,0 +1,55 @@
+@import url('https://fonts.googleapis.com/css2?family=Outfit:wght@300;400;500;600;700;800&family=Space+Grotesk:wght@400;500;600;700&display=swap');
+
+*, *::before, *::after {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+
+:root {
+  --bg:        #0e0c0b;
+  --bg2:       #181512;
+  --card:      #1d1a17;
+  --border:    rgba(255,255,255,0.10);
+  --amber:     #E8920A;
+  --violet:    #B415FF;
+  --grad:      linear-gradient(135deg, #E8920A 0%, #B415FF 100%);
+  --grad-text: linear-gradient(270deg, #E8920A 30%, #B415FF 100%);
+  --text:      #f0ede8;
+  --muted:     #9e9a94;
+  --radius:    14px;
+}
+
+html { scroll-behavior: smooth; }
+
+body {
+  background: var(--bg);
+  color: var(--text);
+  font-family: 'Outfit', sans-serif;
+  line-height: 1.6;
+  min-height: 100vh;
+  overflow-x: hidden;
+}
+
+#root {
+  max-width: 1400px;
+  margin: 0 auto;
+}
+
+.anchor-link {
+  text-decoration: none;
+  color: inherit;
+}
+
+/* Shared section title used across components */
+.section-title {
+  position: relative;
+  text-align: center;
+}
+.section-title h1 {
+  font-family: 'Space Grotesk', sans-serif;
+  font-size: clamp(36px, 5vw, 64px);
+  font-weight: 700;
+  letter-spacing: -0.02em;
+}
+

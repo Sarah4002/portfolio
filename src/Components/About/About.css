@@ -1,0 +1,151 @@
+.about {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  gap: 70px;
+  padding: 100px 80px;
+}
+
+.section-title {
+  position: relative;
+  text-align: center;
+}
+
+.section-title h1 {
+  font-family: 'Space Grotesk', sans-serif;
+  font-size: clamp(36px, 5vw, 64px);
+  font-weight: 700;
+  letter-spacing: -0.02em;
+}
+
+.section-title img {
+  position: absolute;
+  bottom: -8px;
+  right: 0;
+  z-index: -1;
+  width: 10em;
+  height: 4em;
+  opacity: 0.7;
+}
+
+.about-sections {
+  display: flex;
+  gap: 80px;
+  align-items: flex-start;
+  width: 100%;
+  max-width: 1100px;
+}
+
+.about-left img {
+  width: 280px;
+  height: 360px;
+  object-fit: cover;
+  border-radius: var(--radius);
+  border: 1px solid var(--border);
+}
+
+.about-right {
+  display: flex;
+  flex-direction: column;
+  gap: 48px;
+  flex: 1;
+}
+
+.about-para {
+  display: flex;
+  flex-direction: column;
+  gap: 16px;
+  font-size: 17px;
+  font-weight: 400;
+  color: var(--muted);
+  line-height: 1.75;
+}
+
+.about-skills {
+  display: flex;
+  flex-direction: column;
+  gap: 18px;
+}
+
+.about-skill {
+  display: flex;
+  align-items: center;
+  gap: 24px;
+}
+
+.about-skill p {
+  min-width: 140px;
+  font-size: 15px;
+  font-weight: 600;
+  letter-spacing: 0.04em;
+  text-transform: uppercase;
+  color: var(--text);
+}
+
+.about-skill hr {
+  border: none;
+  height: 5px;
+  border-radius: 50px;
+  background: var(--grad);
+  flex: 1;
+}
+
+.about-achievements {
+  display: flex;
+  width: 100%;
+  max-width: 800px;
+  justify-content: space-around;
+  background: var(--card);
+  border: 1px solid var(--border);
+  border-radius: var(--radius);
+  padding: 40px 60px;
+  gap: 20px;
+}
+
+.about-achievement {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  gap: 8px;
+  transition: transform 0.3s;
+  cursor: default;
+}
+
+.about-achievement:hover { transform: translateY(-4px); }
+
+.about-achievement h1 {
+  font-family: 'Space Grotesk', sans-serif;
+  font-size: 48px;
+  font-weight: 700;
+  background: var(--grad-text);
+  -webkit-background-clip: text;
+  background-clip: text;
+  -webkit-text-fill-color: transparent;
+}
+
+.about-achievement p {
+  font-size: 13px;
+  font-weight: 600;
+  letter-spacing: 0.08em;
+  text-transform: uppercase;
+  color: var(--muted);
+  text-align: center;
+}
+
+.about-divider {
+  width: 1px;
+  background: var(--border);
+  align-self: stretch;
+}
+
+@media (max-width: 900px) {
+  .about { padding: 80px 24px; }
+
+  .about-sections { flex-direction: column; }
+
+  .about-left { display: none; }
+
+  .about-achievements { padding: 30px 20px; }
+
+  .about-achievement h1 { font-size: 34px; }
+}

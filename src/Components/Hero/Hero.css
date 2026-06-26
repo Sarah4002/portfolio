@@ -1,0 +1,106 @@
+.hero {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+  min-height: 100vh;
+  gap: 28px;
+  padding: 120px 40px 80px;
+  text-align: center;
+  position: relative;
+}
+
+/* subtle radial glow behind content */
+.hero::before {
+  content: '';
+  position: absolute;
+  inset: 0;
+  background: radial-gradient(ellipse 60% 50% at 50% 40%, rgba(180, 21, 255, 0.08) 0%, transparent 70%);
+  pointer-events: none;
+}
+
+.hero img.hero-photo {
+  width: 160px;
+  height: 160px;
+  border-radius: 50%;
+  object-fit: cover;
+  border: 3px solid transparent;
+  background: linear-gradient(var(--bg), var(--bg)) padding-box,
+              var(--grad) border-box;
+  box-shadow: 0 0 40px rgba(180, 21, 255, 0.25);
+}
+
+.hero h1 {
+  max-width: 780px;
+  font-family: 'Space Grotesk', sans-serif;
+  font-size: clamp(36px, 6vw, 72px);
+  font-weight: 700;
+  line-height: 1.12;
+  letter-spacing: -0.02em;
+}
+
+.hero h1 span {
+  background: var(--grad-text);
+  -webkit-background-clip: text;
+  background-clip: text;
+  -webkit-text-fill-color: transparent;
+}
+
+.hero-subtitle {
+  max-width: 500px;
+  color: var(--muted);
+  font-size: 18px;
+  line-height: 1.7;
+}
+
+.hero-action {
+  display: flex;
+  align-items: center;
+  gap: 16px;
+  flex-wrap: wrap;
+  justify-content: center;
+  margin-top: 8px;
+}
+
+.hero-connect {
+  padding: 16px 40px;
+  border-radius: 50px;
+  background: var(--grad);
+  cursor: pointer;
+  font-size: 16px;
+  font-weight: 600;
+  transition: opacity 0.2s, transform 0.2s;
+}
+
+.hero-connect:hover {
+  opacity: 0.88;
+  transform: translateY(-2px);
+}
+.section-title img {
+  position: absolute;
+  bottom: -20px;
+  right: -50px;
+  z-index: -1;
+  width: 20em;
+  height: 10em;
+  opacity: 0.6;
+}
+.hero-resume {
+  padding: 16px 40px;
+  border-radius: 50px;
+  border: 1.5px solid var(--border);
+  cursor: pointer;
+  font-size: 16px;
+  font-weight: 500;
+  color: var(--text);
+  transition: border-color 0.2s, transform 0.2s;
+}
+
+.hero-resume:hover {
+  border-color: var(--violet);
+  transform: translateY(-2px);
+}
+
+@media (max-width: 600px) {
+  .hero-connect, .hero-resume { padding: 14px 30px; }
+}
