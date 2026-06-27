@@ -106,4 +106,7 @@
     gap: 14px;
     color: var(--text);
   }
+  .navbar-logo{
+    width: 150px;
+  }
 }
