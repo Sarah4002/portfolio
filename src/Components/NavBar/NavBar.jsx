@@ -1,6 +1,6 @@
 import React, { useEffect, useState } from 'react'
 import './NavBar.css'
-import logo from '../../assets/logo-nav.webp'
+import logo from '../../assets/logo.png'
 
 const LINKS = [
   ['home', 'Home'],
