@@ -1,3 +1,7 @@
+import php from '../assets/tech/php.svg'
+import dart from '../assets/tech/dart.svg'
+import electron from '../assets/tech/electron.svg'
+import firebase from '../assets/tech/firebase.svg'
 import react from '../assets/tech/react.svg'
 import flutter from '../assets/tech/flutter.svg'
 import html5 from '../assets/tech/html5.svg'
@@ -22,6 +26,8 @@ export const SKILL_GROUPS = [
     items: [
       { name: 'React', icon: react, level: 85 },
       { name: 'Flutter', icon: flutter, level: 80 },
+      { name: 'Dart', icon: dart, level: 78 },
+      { name: 'Electron', icon: electron, level: 72 },
       { name: 'HTML', icon: html5, level: 92 },
       { name: 'CSS', icon: css3, level: 90 },
       { name: 'C#', icon: csharp, level: 65 },
@@ -38,6 +44,8 @@ export const SKILL_GROUPS = [
       { name: 'Flask', icon: flask, level: 75 },
       { name: 'Python', icon: python, level: 82 },
       { name: 'JavaScript', icon: javascript, level: 88 },
+      { name: 'PHP', icon: php, level: 70 },
+      { name: 'Firebase', icon: firebase, level: 75 },
     ],
   },
   {

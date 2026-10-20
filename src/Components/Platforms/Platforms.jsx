@@ -18,7 +18,7 @@ const I = {
 
 const PLATFORMS = [
   {
-    key: 'web', title: 'Web applications', stack: ['React', 'HTML/CSS', 'Node.js', 'Flask', 'PostgreSQL'],
+    key: 'web', title: 'Web applications', stack: ['React', 'HTML/CSS', 'Node.js', 'Flask', 'PHP', 'PostgreSQL'],
     desc: 'Responsive, accessible web apps and dashboards with a solid API and database behind them.',
   },
   {
