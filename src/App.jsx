@@ -2,22 +2,26 @@ import React from 'react'
 import NavBar from './Components/NavBar/NavBar'
 import Hero from './Components/Hero/Hero'
 import About from './Components/About/About'
-import Services from './Components/Services/Services'
-import MyWork from './Components/MyWork/MyWork'
+import Skills from './Components/Skills/Skills'
+import Platforms from './Components/Platforms/Platforms'
+import Projects from './Components/Projects/Projects'
+import Terminal from './Components/Terminal/Terminal'
 import Contact from './Components/Contact/Contact'
 import Footer from './Components/Footer/Footer'
 
-const App = () => {
-  return(
-    <div>
-      <NavBar/>
-      <Hero/>
-      <About/>
-      <Services/>
-      <MyWork/>
-      <Contact/>
-      <Footer/>
-    </div>
-  )
-}
+const App = () => (
+  <>
+    <NavBar />
+    <main>
+      <Hero />
+      <About />
+      <Skills />
+      <Platforms />
+      <Projects />
+      <Terminal />
+      <Contact />
+    </main>
+    <Footer />
+  </>
+)
 export default App

@@ -1,0 +1,14 @@
+.tw-rest { visibility: hidden; }
+.tw-caret {
+  display: inline-block;
+  width: 0;
+  height: 1em;
+  vertical-align: -0.12em;
+  border-right: 0 solid var(--green);
+}
+.tw-caret.on {
+  border-right-width: 2px;
+  margin-left: 1px;
+  animation: blink 0.8s steps(1) infinite;
+}
+@keyframes blink { 50% { border-color: transparent; } }
