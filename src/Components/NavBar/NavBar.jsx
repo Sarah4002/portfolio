@@ -1,5 +1,6 @@
 import React, { useEffect, useState } from 'react'
 import './NavBar.css'
+import logo from '../../assets/logo-nav.webp'
 
 const LINKS = [
   ['home', 'Home'],
@@ -35,7 +36,7 @@ const NavBar = () => {
     <header className={`navbar ${scrolled ? 'scrolled' : ''}`}>
       <div className="navbar-inner">
         <a href="#home" className="navbar-logo" aria-label="Sara Belmahi — home">
-          <span className="lg-b">&lt;</span><span className="grad-text">SaraH</span><span className="lg-b">/&gt;</span>
+          <img src={logo} alt="SaraH" />
         </a>
 
         <nav className={`nav-menu ${open ? 'open' : ''}`} aria-label="Main">

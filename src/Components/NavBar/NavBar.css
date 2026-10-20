@@ -9,10 +9,11 @@
   border-bottom-color: var(--border);
 }
 .navbar-inner {
-  max-width: 1180px; margin: 0 auto; padding: 16px 32px;
+  max-width: 1180px; margin: 0 auto; padding: 8px 32px;
   display: flex; align-items: center; justify-content: space-between;
 }
-.navbar-logo { font-family: var(--mono); font-weight: 700; font-size: 22px; letter-spacing: -0.02em; }
+.navbar-logo img { height: 80px; width: auto; transition: transform .3s, filter .3s; }
+.navbar-logo:hover img { transform: scale(1.06); filter: brightness(1.2); }
 .lg-b { color: var(--muted); font-weight: 400; }
 
 .nav-menu { display: flex; align-items: center; gap: 6px; }
