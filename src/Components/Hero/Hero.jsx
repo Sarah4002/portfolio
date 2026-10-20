@@ -1,6 +1,6 @@
 import React, { useEffect, useState } from 'react'
 import './Hero.css'
-import profile_img from '../../assets/profile_img.jpg'
+import { ALL_TECH } from '../../data/tech'
 import { prefersReducedMotion } from '../../hooks/useInView'
 
 const ROLES = [
@@ -31,6 +31,31 @@ const useRotatingType = (words) => {
   }, [words])
   return text
 }
+
+const ORBITS = [
+  { r: 1, names: ['React', 'Flutter', 'Node.js'], dur: 22 },
+  { r: 2, names: ['Python', 'PostgreSQL', 'Electron', 'Dart'], dur: 34 },
+  { r: 3, names: ['JavaScript', 'MySQL', 'Firebase', 'Flask', 'PHP'], dur: 48 },
+]
+const byName = (n) => ALL_TECH.find((t) => t.name === n)
+
+const Orbit = () => (
+  <div className="orbit" aria-hidden="true">
+    <div className="orbit-core"><span>&lt;/&gt;</span></div>
+    {ORBITS.map((o) => (
+      <div key={o.r} className={`orbit-ring o${o.r}`} style={{ '--dur': `${o.dur}s`, '--dir': o.r === 2 ? 'reverse' : 'normal', '--s': o.r === 2 ? -1 : 1 }}>
+        {o.names.map((n, i) => {
+          const t = byName(n)
+          return t ? (
+            <span key={n} className="orbit-item" style={{ '--a': `${(360 / o.names.length) * i}deg` }}>
+              <span className="orbit-icon"><img src={t.icon} alt="" /></span>
+            </span>
+          ) : null
+        })}
+      </div>
+    ))}
+  </div>
+)
 
 const Hero = () => {
   const role = useRotatingType(ROLES)
@@ -63,12 +88,7 @@ const Hero = () => {
         </div>
 
         <div className="hero-visual">
-          <div className="hero-ring">
-            <img src={profile_img} alt="Sara Belmahi" />
-          </div>
-          <span className="float-badge fb1">Web</span>
-          <span className="float-badge fb2">Mobile</span>
-          <span className="float-badge fb3">Desktop</span>
+          <Orbit />
         </div>
       </div>
 
