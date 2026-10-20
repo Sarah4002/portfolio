@@ -1,11 +1,14 @@
 import React from 'react'
 import './Footer.css'
 import { GITHUB, LINKEDIN, EMAIL } from '../Terminal/commands'
+import logo from '../../assets/logo.png'
 
 const Footer = () => (
   <footer className="footer">
     <div className="container footer-inner">
-      <a href="#home" className="footer-logo"><span>&lt;</span><span className="grad-text">SaraH</span><span>/&gt;</span></a>
+       <a href="#home" className="navbar-logo" aria-label="Sara Belmahi — home">
+                <img src={logo} alt="SaraH" />
+              </a>
       <p>Full Stack Developer — web, mobile & desktop.</p>
       <nav aria-label="Social links">
         <a href={GITHUB} target="_blank" rel="noreferrer">GitHub</a>
